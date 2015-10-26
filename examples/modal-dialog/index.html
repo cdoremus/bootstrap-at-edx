@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+   </style>
+   <title>Modal Dialog</title>
+</head>
+<body>
+<!-- A modal dialog takes over the page focus. Anything outside of the dialog cannot be accessed until it is dismissed -->
+    <!-- The modal class signifies the dialog container.
+      The fade class provides the animation.
+      The -1 tabindex prevents a user from tabbing into this modal dialog 
+      the role, and aria* attributes are for screen readers
+      -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledBy="myModal-label" aria-hidden="true">
+      <!-- Define this as a model dialog -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- The data-dismiss attribute signifies this as a button that dismisses the dialog -->
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <!-- The id is used by aria-labelledBy above in screen readers -->
+          <h4 class="modal-title" id="myModal-label">Modal title</h4>
+        </div>  
+        <!-- Content for the modal dialog goes here -->
+        <div class="modal-body">
+          <p>Loren impsum blah blahy blah....</p>
+        </div>  
+        <div class="modal-footer">
+          <!-- The data-dismiss attribute signifies this as a button that dismisses the dialog (as above) -->
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"> Save</button>
+        </div>  
+      </div>
+    </div> <!-- end of modal-dialog -->
+  </div> <!-- end of modal with id=myModal -->
+    
+    <!--Button to launch the modal -->
+  <div class="container">
+    <div class="row">
+      <!--The data-target points to the modal with an id=myModal 
+        The data-toggle=modal wires it up with the modal above
+      -->
+      <button type="button" class="col-md-offset-3 col-md-6 btn btn-success" data-toggle="modal" data-target="#myModal">
+        Launch Modal Dialog
+      </button>
+   </div>
+  </div>
+
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+</body>
+</html>

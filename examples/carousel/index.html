@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+     body {
+       padding-top: 70px;
+     }
+   </style>
+   <title>Carousel Sample</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <!-- Carousel container class=carousel and data-ride=carousel makrs this as a carousel.
+        The slid class provides animation of picture changes -->           
+        <div id="carousel-demo" class="carousel slide" data-ride="carousel">
+          <!-- The carousel-indicators are the bottom markers showing where we are in the carousel cycle  -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-demo" data-slide-to="1"></li>
+          </ol>
+          <!-- Carousel content starts here (images and text) -->
+          <div class="carousel-inner">
+            <!-- Each carousel item displayed has class=item -->
+            <div class="item active">
+              <img alt="First slide" src="http://placehold.it/1200x675&text=First+slide" />
+              <!-- The carousel-cation text appears on the item when it gets displayed -->
+              <div class="carousel-caption">
+                <h3>Caption Heading One</h3>
+                <p>Caption Text One</p>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="Second slide" src="http://placehold.it/1200x675&text=Second+slide" />
+              <div class="carousel-caption">
+                <h3>Caption Heading Two</h3>
+                <p>Caption Text Two</p>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel navigation links identified by carousel-control (either left or right). 
+          The href needs to match the carousel container id (prefixed with #) -->
+          <a class="left carousel-control" href="#carousel-demo" data-slide="prev">
+            <!-- A glyphicon is an icon -->
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-demo" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+    </div>
+  </div>
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+</body>
+</html>

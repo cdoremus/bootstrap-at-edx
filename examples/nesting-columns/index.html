@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nesting columns</title>
+		<link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />	</head>
+	<style>
+		body {
+			padding-top: 10px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<!-- IF column numbers add up to > 12, then extra content will get pumped dpwn to a next row.
+				This can be helpful to vertically align smaller screens, which is done with the col-xs* classes here.
+				NOTE: If the size class is not specified, each column will take up an entire row.
+				 -->
+		<div class="row">
+			<div class="col-xs-6 col-md-4">
+				<h2>First column with Nest</h2>
+				<div class="row">
+					<!--Creates 12 new columns. Resizing to small makes both of these new columns take up the whole 12 columns inside the nest -->
+					<div class="col-md-6">
+						<h3>First Nest</h3>						
+					</div>
+					<div class="col-md-6">
+						<h3>Second Nest</h3>												
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4"><h3>Second</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+			</div>
+			<div class="col-xs-12 col-md-4"><h3>Third</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+			</div>
+		</div>
+		</div>
+	<script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+	<script src="../../resources/scripts/bootstrap.min.js"></script>
+	</body>
+</html>

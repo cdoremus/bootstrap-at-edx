@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+     body {
+       padding-top: 70px;
+     }
+   </style>
+   <title>Navbar Sample</title>
+</head>
+<body>
+  <!-- Use navbar-fixed-bottom to fix the navigation bar on the page bottom -->
+   <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <a href="index.html" class="navbar-brand">Navbar Example</a>
+		 <!-- data-toggle=collapse data-target=collapse allows the button to control the 'collapse navbar' div with id=hamburger-navigation -->
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+           <span class="sr-only">Navigation toggle</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+       <div class="collapse navbar-collapse" id="hamburger-navigation">
+         <div class="navbar-text navbar-right">
+           <a class="navbar-link" href="URL here">
+             Follow us!
+           </a>
+         </div>
+         <ul class="nav navbar-nav" role="menu">
+           <li><a href="#" class="active">Current Page</a><span class="sr-only">current</span></li>
+           <li><a href="#">Link</a></li>
+           <li class="dropdown">
+             <a class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret" /></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">Option one</a></li>
+               <li><a href="#">Option two</a></li>
+             </ul>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+ 
+ <!-- content -->
+ <div>
+   <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum facilisis posuere. Curabitur ullamcorper bibendum ex, sit amet consectetur turpis posuere vitae. Integer rutrum purus eros, id venenatis odio laoreet sed. Donec mattis accumsan neque eu hendrerit. Ut laoreet velit vel nisi vestibulum, eget aliquet ex commodo. Integer aliquam ex at commodo fermentum. Aenean dapibus massa ut tempor aliquet. Ut condimentum consequat urna. Morbi auctor arcu ac urna varius ultrices. Cras sagittis, sapien ac commodo pulvinar, turpis lorem vestibulum massa, nec eleifend nisi risus tincidunt tortor. Nulla at est commodo, suscipit mauris vel, tempor neque. Proin convallis suscipit urna ut imperdiet.
+   </p>
+   <p> 
+      Proin turpis orci, fringilla non fermentum vel, vehicula sit amet leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce iaculis luctus sem sed interdum. Pellentesque arcu enim, aliquam eget nisl efficitur, porta gravida turpis. Duis vulputate mauris eu arcu dignissim, sed rutrum magna congue. Nam lobortis magna non quam tristique feugiat. Nulla finibus nisl diam, eget cursus erat lacinia sit amet. Nam bibendum vestibulum eros, ac euismod nulla ultricies id. Ut venenatis massa scelerisque sem posuere, et viverra ipsum venenatis. Donec mollis semper velit nec facilisis. Vestibulum vel lobortis diam. Morbi lectus purus, feugiat vel faucibus ac, pulvinar a orci. Curabitur vel venenatis magna.
+   </p>
+   <p>   
+      Curabitur pharetra odio purus, et finibus augue commodo bibendum. Praesent non finibus odio. Nulla orci tortor, consectetur at commodo non, rhoncus vitae sapien. Fusce sed urna ac metus consequat tincidunt. Duis id nisi vulputate, eleifend mauris ut, ultrices tortor. Sed eget arcu enim. Aenean vehicula turpis a imperdiet varius. In hac habitasse platea dictumst. Phasellus non mauris non magna tempus malesuada vel ac neque.
+   </p>
+   <p> 
+      Mauris eu ante ut libero eleifend auctor id et lacus. Morbi vulputate eros eget felis rhoncus rhoncus. Curabitur accumsan, diam eu faucibus molestie, dolor massa luctus risus, non semper sapien dolor non enim. Cras egestas ligula in sem dictum convallis. Sed faucibus hendrerit consectetur. Curabitur in libero nec odio dictum ullamcorper. Suspendisse potenti. Fusce consectetur libero eu malesuada finibus. Fusce semper gravida mauris, eget gravida libero suscipit et. Pellentesque euismod tempus sem quis fringilla. Vivamus eros ante, tempus eget commodo eget, ultricies nec arcu. Curabitur ac gravida elit. Mauris dapibus, justo quis condimentum pretium, lectus purus tincidunt dui, id iaculis tellus lectus mollis quam.   </p>
+   <p> 
+
+  Vestibulum aliquam purus vel nibh sagittis pretium. Suspendisse in hendrerit diam, at dignissim nibh. Suspendisse pellentesque ut quam non scelerisque. Aenean in leo ut orci posuere dignissim eget vitae lacus. In eget auctor lectus, vel porttitor risus. Suspendisse quis risus felis. Ut auctor odio nisi, non consectetur diam dapibus sit amet. Phasellus maximus rhoncus est, ut malesuada odio interdum tincidunt.   
+   </p>
+ </div>
+ 
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+</body>
+</html>

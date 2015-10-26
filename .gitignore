@@ -1,0 +1,8 @@
+
+*~*
+node_modules
+*.log
+*~
+*.sublime*
+typings/
+tsd.json

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+   </style>
+   <title>Alert Sample</title>
+</head>
+<body>
+
+  <div class="container">
+    <!--Shown outside and above the alert -->
+    <h3>This shows a dismissable alert box</h3>
+    
+    <!--Alert starts here -->
+    <!-- Possible alert modifiers:
+    alert-success - green
+    alert-info - light blue
+    alert-warning - yellow
+    alert-danger - red
+    
+    NOTE: Bootstrap provides 'hidden' and 'visible' classes to allow showing or hiding the alert
+    -->
+    <div class="alert alert-warning alert-dismissable">
+      <!-- Displays the X to dismiss the alert; alert-dismissable must be a container defined class 
+          and data-dismiss=alert must be defined.
+      -->
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+      <h3>Warning</h3>
+      <div>It appears that something has gone wrong</div>
+      <!-- Any links inside the alert requre class=alert-link -->
+      <div><a href="link.html" class="alert-link">This link is inside the alert which points to link.html</a></div>
+    </div> <!-- end of alert -->
+    
+  </div>
+
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+</body>
+</html>

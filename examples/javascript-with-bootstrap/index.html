@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+   </style>
+   <title>Modal Dialog with JavaScript</title>
+</head>
+<body>
+  <h2 class="text-center">This page demonstrates using jQuery to dynamically change Bootstrap classes</h2>
+  <h4 class="text-center">The jQuery code is at the bottom of the page</h4>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledBy="myModal-label" aria-hidden="true">
+      <!-- Define this as a model dialog -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModal-label">Register</h4>
+        </div>  
+        <!-- Content for the modal dialog goes here -->
+        <div class="modal-body">
+          <!-- Form with name and email input fields-->
+          <form class="form-horizontal" role="form">
+            <!-- Email input set to required -->
+            <div class="form-group has-feedback">
+              <label for="email" class="control-label col-md-3">Email:</label>
+              <div class="col-md-6">
+                <input type="email" id="email" class="form-control" 
+                    name="email" required="required" placeholder="Enter email"/>
+                <span class="glyphicon form-control-feedback"></span>
+              </div>
+            </div>
+            <!-- Twitter input set to required -->
+            <div class="form-group has-feedback">
+              <label for="twitter" class="control-label col-md-3">Twitter:</label>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">@</span>
+                  <input type="text" id="twitter" class="form-control" 
+                      name="twitter" required="required" placeholder="Enter twitter handle"/>							
+                </div>
+                <span class="glyphicon form-control-feedback"></span>
+              </div>
+            </div>
+            
+          </form>
+          
+        </div>  
+        <div class="modal-footer">
+          <!-- The data-dismiss attribute signifies this as a button that dismisses the dialog (as above) -->
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="save" class="btn btn-primary">Register</button>
+        </div>  
+      </div>
+    </div> <!-- end of modal-dialog -->
+  </div> <!-- end of modal with id=myModal -->
+    
+  <div class="container">
+    <!-- Modal submission success alert which is hidden by default -->
+    <div class="alert alert-success hidden" id="success-alert">
+      <h2>Saved data</h2>
+      <div>Your information has been submitted</div>  
+    </div>
+    
+    <!--Button to launch the modal -->
+    <div class="row">
+      <!--The data-target points to the modal with an id=myModal 
+        The data-toggle=modal wires it up with the modal above
+      -->
+      <button type="button" class="col-md-offset-3 col-md-6 btn btn-success" data-toggle="modal" data-target="#myModal">
+        Launch Modal Dialog
+      </button>
+   </div>
+  </div>
+
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+   
+   <script>
+     /**
+      * jQuery function to dynamically change Bootstrap classes. This needs to be below the jQuery script definition.
+      */
+     $(function() {
+       $('#save').click(function() {
+         var formValid = true;
+         //loop through every input control
+         $('input').each(function() {
+           //find the form-group to set success or error
+           //this==current input control
+           //find the form-group parent
+           var formGroup = $(this).parents('.form-group');
+           //find the glyphicon to show check or X
+           //use find() rather than children() because find() goes down the tree; children() only goes one step
+           var glyphicon = formGroup.find('.glyphicon');
+           
+           //Use HTML5 checkValidity() function
+           if (this.checkValidity()) {
+             //show green; remove red
+             formGroup.addClass('has-success').removeClass('has-error');
+             //show check; remove X
+             glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');             
+           } else {
+             //show red; remove green
+             formGroup.addClass('has-error').removeClass('has-success');
+             //show X; remove check
+             glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
+             formValid = false;             
+           }
+         });
+         if (formValid) {
+           $('#myModal').modal('hide');
+           $('#success-alert').removeClass('hidden');
+         }
+       });
+     });
+     
+   </script>
+</body>
+</html>

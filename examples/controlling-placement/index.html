@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Controlling Placement</title>
+		<link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />	</head>
+	<style>
+		body {
+			padding-top: 10px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!--offset of two centers the columns -->
+				<div class="col-md-4 col-md-offset-2"><h3>First</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+				</div>
+				<div class="col-md-4"><h3>Second</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+				</div>
+			</div>
+			<div class="row">
+				<!-- We want the very important content to be on the top of the two at xs screen sizes -->
+				<!-- Use push to move this content to the right on medium+large screens -->
+				<div class="col-xs-12 col-md-6 col-md-push-6">
+					<h3>Very important content</h3>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+				</div>
+				<!-- Use pull to move this content to the left on medium+large screens -->
+				<div class="col-xs-12 col-md-6 col-md-pull-6">
+					<h3>Not too important content</h3>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus magna vitae velit ullamcorper, vel pellentesque arcu malesuada. Curabitur eros magna, blandit finibus sagittis sed, tincidunt placerat nisl. Integer quis dolor dui. 			Curabitur tempus purus metus, non bibendum erat condimentum sed. Fusce eget tellus est.
+				</div>
+			</div>
+		</div>
+	<script src=",./../resources/scripts/jquery-2.1.4.min.js"></script>
+	<script src=",./../resources/scripts/bootstrap.min.js"></script>
+	</body>
+</html>

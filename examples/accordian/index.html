@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />
+   <style>
+     body {
+       padding-top: 5px;
+     }
+   </style>
+   <title>Accordion Sample</title>
+</head>
+<body>
+  <div class="container-fluid"
+    <div class="jumbotron">
+      <h2>Accordion Sample</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <!-- Accordion container -->
+        <div class="panel-group" id="accordion-sample">
+          <!-- First accordion panel -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-one">
+                  Heading One
+                </a>
+              </h4>
+            </div>
+            <div id="accordion-sample-one" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Sample content 1<br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan interdum quam, vel pellentesque felis lacinia a. Nam ut magna aliquam, pretium mi consectetur, ultricies velit. Donec scelerisque tortor ac fringilla placerat. Aenean placerat odio id dui tristique egestas. Mauris consequat felis et ornare semper. Donec ornare diam nibh, et accumsan dui porta vitae. Fusce gravida, elit non tristique aliquet, felis enim sodales velit, sed volutpat eros erat et purus. Phasellus vitae dignissim massa. Nulla nec porta magna. Quisque interdum dapibus neque eget facilisis. Praesent bibendum ut felis quis tempus. Fusce fermentum interdum libero, ac tincidunt mi posuere ut.									
+              </div>
+            </div>
+          </div>
+          <!-- Second accordion panel -->
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-two">
+                    Heading Two
+                  </a>
+                </h4>
+              </div>
+            <div id="accordion-sample-two" class="panel-collapse collapse">
+              <div class="panel-body">
+                Sample content 2<br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan interdum quam, vel pellentesque felis lacinia a. Nam ut magna aliquam, pretium mi consectetur, ultricies velit. Donec scelerisque tortor ac fringilla placerat. Aenean placerat odio id dui tristique egestas. Mauris consequat felis et ornare semper. Donec ornare diam nibh, et accumsan dui porta vitae. Fusce gravida, elit non tristique aliquet, felis enim sodales velit, sed volutpat eros erat et purus. Phasellus vitae dignissim massa. Nulla nec porta magna. Quisque interdum dapibus neque eget facilisis. Praesent bibendum ut felis quis tempus. Fusce fermentum interdum libero, ac tincidunt mi posuere ut.									
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <script src="../../resources/scripts/jquery-2.1.4.min.js"></script>
+   <script src="../../resources/scripts/bootstrap.min.js"></script>
+</body>
+</html>
