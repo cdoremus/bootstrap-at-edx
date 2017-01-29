@@ -4,5 +4,6 @@ node_modules
 *.log
 *~
 *.sublime*
+.vscode
 typings/
 tsd.json
