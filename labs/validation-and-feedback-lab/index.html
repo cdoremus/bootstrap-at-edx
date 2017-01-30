@@ -2,7 +2,13 @@
 <html>
 	<head>
 		<title>Submit Album</title>
-		<link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />	</head>
+		<link href="../../resources/styles/bootstrap.min.css" rel="stylesheet" />	
+		<script type="text/javascript">
+		    function confirmClicked() {
+			    $('#confirmMsg').html('Confirm selected. Use cancel button to close modal.');
+			}
+		</script>
+</head>
 	<body>
 	<!-- Modal container defined here -->
   <div class="modal fade" id="confirmAlbumSubmissionModal" tabindex="-1" role="dialog" aria-labelledBy="albumSubmission-label" aria-hidden="true">
@@ -18,11 +24,12 @@
         <!-- Content for the modal dialog goes here -->
         <div class="modal-body">
           <p>Are you sure you wish to submit this album?</p>
+          <p id="confirmMsg" style="color:red"><p>
         </div>  
         <div class="modal-footer">
           <!-- The data-dismiss attribute signifies this as a button that dismisses the dialog (as above) -->
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Confirm</button>
+          <button type="button" class="btn btn-primary" onclick="confirmClicked()">Confirm</button>
         </div>  
       </div>
     </div> <!-- end of modal-dialog -->
